@@ -1,0 +1,27 @@
+{
+  "name": "tech-blogging",
+  "private": true,
+  "version": "0.0.1",
+  "repository": "git@github.com:productboard/tech-blogging.git",
+  "author": "Martin Hochel <hochelmartin@gmail.com>",
+  "license": "MIT",
+  "scripts": {
+    "format": "prettier --check \"**/*.{js,ts,tsx,css,less,md}\"",
+    "format:write": "yarn format --write"
+  },
+  "devDependencies": {
+    "husky": "4.2.1",
+    "lint-staged": "10.0.2",
+    "prettier": "1.19.1"
+  },
+  "husky": {
+    "hooks": {
+      "pre-commit": "lint-staged"
+    }
+  },
+  "lint-staged": {
+    "*.{js,jsx,ts,tsx,css,json,md,html}": [
+      "prettier --write"
+    ]
+  }
+}
